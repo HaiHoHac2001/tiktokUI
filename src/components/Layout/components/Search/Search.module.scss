@@ -1,4 +1,3 @@
-
 .search,
 .search-result {
     width: 361px;
@@ -47,6 +46,24 @@
     line-height: 20px;
     font-weight: 600;
     color: rgba(22, 24, 35, 0.5);
+}
+
+.clear {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+@keyframes spinner {
+    to {
+        transform: translateY(-50%) rotate(0);
+    }
+    from {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+.loading {
+    animation: spinner 0.7s linear infinite;
 }
 
 .clear,

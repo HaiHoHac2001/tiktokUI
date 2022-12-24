@@ -2,7 +2,7 @@
     min-width: 224px;
     min-height: 186px;
     margin-top: -8px;
-    
+
     .menu-item {
         margin-left: 0;
         font-weight: 400;
@@ -13,18 +13,25 @@
     padding-bottom: 8px;
 }
 
+.menu-body {
+    overflow-y: auto;
+    
+    max-height: min(100vh - 96px - 60px, 734px);
+    // max-height: min(100vh - 96px - 160px, 700px);
+}
+
 .menu-item {
     display: flex;
     justify-content: flex-start;
     border-radius: 0;
     width: 100%;
     min-height: 42px;
-    
+
     &.separate {
         border-top: 1px solid rgba(22, 24, 35, 0.12);
     }
 
-    &:hover{
+    &:hover {
         background: rgba(22, 24, 35, 0.03);
     }
 }
@@ -33,6 +40,7 @@
 .header {
     position: relative;
     height: 50px;
+    flex-shrink: 0;
 }
 
 .back-btn {
@@ -47,5 +55,5 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% ,-50%);
+    transform: translate(-50%, -50%);
 }

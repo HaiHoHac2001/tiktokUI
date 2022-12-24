@@ -4,6 +4,11 @@
     --search-top-spacer: 9px;
     --search-button-width: 52px;
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: var(--white);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -21,6 +26,9 @@
     justify-content: space-between;
 }
 
+.logo-link {
+    display: flex;
+}
 
 // action
 .action {

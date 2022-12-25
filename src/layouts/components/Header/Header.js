@@ -20,7 +20,7 @@ import images from '~/assets/images';
 import Button from '~/components/Button';
 import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
-import Menu from '~/components/Popper/Menu';
+import Menu from '~/components/Popper/Menu/Menu';
 import styles from './Header.module.scss';
 import Search from '../Search';
 
@@ -36,7 +36,37 @@ const MENU_ITEMS = [
                 {
                     type: 'language',
                     code: 'vi',
-                    title: 'Tiếng Việt',
+                    title: 'Tiếng Việt (Việt Nam)',
+                },
+                {
+                    type: 'language',
+                    code: '',
+                    title: 'العربية',
+                },
+                {
+                    type: 'language',
+                    code: '',
+                    title: 'বাঙ্গালি (ভারত)',
+                },
+                {
+                    type: 'language',
+                    code: '',
+                    title: 'Cebuano (Pilipinas)',
+                },
+                {
+                    type: 'language',
+                    code: '',
+                    title: 'Čeština (Česká republika)',
+                },
+                {
+                    type: 'language',
+                    code: '',
+                    title: 'Deutsch',
+                },
+                {
+                    type: 'language',
+                    code: '',
+                    title: 'Ελληνικά (Ελλάδα)',
                 },
                 {
                     type: 'language',
@@ -45,103 +75,63 @@ const MENU_ITEMS = [
                 },
                 {
                     type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
+                    code: '',
+                    title: 'Español',
                 },
                 {
                     type: 'language',
-                    code: 'en',
-                    title: 'English',
+                    code: '',
+                    title: 'Suomi (Suomi)',
                 },
                 {
                     type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
+                    code: '',
+                    title: 'Filipino (Pilipinas)',
                 },
                 {
                     type: 'language',
-                    code: 'en',
-                    title: 'English',
+                    code: '',
+                    title: 'Français',
                 },
                 {
                     type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
+                    code: '',
+                    title: 'עברית (ישראל)',
                 },
                 {
                     type: 'language',
-                    code: 'en',
-                    title: 'English',
+                    code: '',
+                    title: 'हिंदी',
                 },
                 {
                     type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
+                    code: '',
+                    title: 'Magyar (Magyarország)',
                 },
                 {
                     type: 'language',
-                    code: 'en',
-                    title: 'English',
+                    code: '',
+                    title: '日本語（日本）',
                 },
                 {
                     type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
+                    code: '',
+                    title: '한국어 (대한민국)',
                 },
                 {
                     type: 'language',
-                    code: 'en',
-                    title: 'English',
+                    code: '',
+                    title: 'Englမြန်မာ (မြန်မာ)ish',
                 },
                 {
                     type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
+                    code: '',
+                    title: '繁體中文',
                 },
                 {
                     type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
+                    code: '',
+                    title: '简体中文',
                 },
             ],
         },

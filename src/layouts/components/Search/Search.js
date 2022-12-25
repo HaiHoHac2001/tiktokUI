@@ -1,15 +1,14 @@
 import HeadlessTippy from '@tippyjs/react/headless';
 import { useEffect, useRef, useState } from 'react';
 import 'tippy.js/dist/tippy.css';
-import axios from 'axios';
 
-import request from '~/utils/request';
 import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classNames from 'classnames/bind';
 import AccountItem from '~/components/AccountItem';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import { useDebounce } from '~/hooks';
-import classNames from 'classnames/bind';
+import request from '~/utils/request';
 import styles from './Search.module.scss';
 
 const cx = classNames.bind(styles);
@@ -17,10 +16,10 @@ function Search() {
     const inputRef = useRef();
     const [searchValue, setSearchValue] = useState('');
     const [searchResult, setSearchResult] = useState([]);
-    const [showResult, setShowResult] = useState(true);
+    const [showResult, setShowResult] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const debounced = useDebounce(searchValue, 500);
+    const debouncedValue = useDebounce(searchValue, 500);
 
     const handleClear = () => {
         setSearchValue('');
@@ -42,7 +41,7 @@ function Search() {
 
     useEffect(() => {
         // vì api không cho để chuỗi rỗng
-        if (!debounced.trim()) {
+        if (!debouncedValue.trim()) {
             setSearchResult([]);
             return;
         }
@@ -51,7 +50,7 @@ function Search() {
 
         // Fetch
         //     setTimeout(() => {
-        //         fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debounced)}&type=less`)
+        //         fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debouncedValue)}&type=less`)
         //             .then((response) => response.json())
         //             .then((res) => {
         //                 setSearchResult(res.data)
@@ -66,7 +65,7 @@ function Search() {
         request
             .get('users/search', {
                 params: {
-                    q: debounced,
+                    q: debouncedValue,
                     type: 'less',
                 },
             })
@@ -78,7 +77,7 @@ function Search() {
                 console.error(err);
             })
             .finally(() =>setLoading(false))
-    }, [debounced]);
+    }, [debouncedValue]);
     return (
         //Xử lý cái warning của thư viện tippy
         <div>

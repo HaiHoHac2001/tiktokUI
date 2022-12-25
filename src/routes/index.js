@@ -1,5 +1,5 @@
-import { HeaderOnly } from '~/components/Layout';
-import routesConfig from '~/config/routes';
+import { HeaderOnly } from'~/layouts';
+import config from '~/config';
 import Home from '~/page/Home';
 import Following from '~/page/Following';
 import Profile from '~/page/Profile';
@@ -7,16 +7,16 @@ import Upload from '~/page/Upload';
 
 const publicRoutes = [
     {
-        path: routesConfig.home,
+        path: config.routes.home,
         component: Home,
     },
     {
-        path: routesConfig.following,
+        path: config.routes.following,
         component: Following,
     },
-    { path: routesConfig.profile, component: Profile },
+    { path: config.routes.profile, component: Profile },
     {
-        path: routesConfig.upload,
+        path: config.routes.upload,
         component: Upload,
         layout: HeaderOnly,
     },

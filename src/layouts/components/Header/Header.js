@@ -11,18 +11,20 @@ import {
     faMoon,
     faSignOut,
     faUser,
+    faVideo
 } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
 import images from '~/assets/images';
 
 import Button from '~/components/Button';
 import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Menu from '~/components/Popper/Menu/Menu';
-import styles from './Header.module.scss';
 import Search from '../Search';
+import styles from './Header.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -154,17 +156,22 @@ const MENU_ITEMS = [
 const userMenu = [
     {
         icon: <FontAwesomeIcon icon={faUser} />,
-        title: 'View profile',
+        title: 'Xem hồ sơ',
         to: '/@hoaa',
     },
     {
         icon: <FontAwesomeIcon icon={faCoins} />,
-        title: 'Get coins',
+        title: 'Nhận Xu',
         to: '/coin',
     },
     {
+        icon: <FontAwesomeIcon icon={faVideo} />,
+        title: 'LIVE Studio',
+        to: '/studio',
+    },
+    {
         icon: <FontAwesomeIcon icon={faGear} />,
-        title: 'Settings',
+        title: 'Cài đặt',
         to: '/settings',
     },
     ...MENU_ITEMS,

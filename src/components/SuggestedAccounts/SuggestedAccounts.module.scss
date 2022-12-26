@@ -1,0 +1,58 @@
+.wrapper {
+    border-top: 1px solid #1618231f;
+}
+
+.label {
+    font-size: 1.12rem;
+    font-weight: 600;
+    padding: 16px 0 8px 0;
+    color: #161823bf;
+}
+
+.account-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.item-info {
+    flex: 1;
+    margin-left: 12px;
+}
+
+.nickname {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #161823;
+    line-height: 1;
+    font-family: "SofiaPro, Arial, Tahoma, PingFangSC, sans-serif";
+}
+
+.check {
+    color:#20d5ec;
+    font-size: 1.4rem;
+    margin-left: 4px;
+}
+
+.name {
+    color: #161823bf;
+    font-family: "ProximaNova";
+    font-size: 0.96rem;
+}
+
+.see-more {
+    color:#fe2c55 ;
+    font-weight: 600;
+    font-size: 1.12rem;
+    padding: 8px;
+    cursor: pointer;
+}

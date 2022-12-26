@@ -6,6 +6,7 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import styles from './SuggestedAccounts.module.scss';
+import AccountPreview from './AccountPreview/AccountPreview';
 
 const cx = classNames.bind(styles);
 
@@ -14,14 +15,16 @@ function AccountItem() {
         return (
             <div tabIndex="-1" {...attrs}>
                 <PopperWrapper>
-                    <div className={cx('preview')}></div>
+                    <div className={cx('preview')}>
+                        <AccountPreview />
+                    </div>
                 </PopperWrapper>
             </div>
         );
     };
     return (
         <div>
-            <Tippy interactive placement="bottom" delay={[800, 0]} render={renderPreview}>
+            <Tippy interactive placement="bottom" delay={[500, 200]} offset={[-20, 0]} render={renderPreview}>
                 <div className={cx('account-item')}>
                     <img
                         className={cx('avatar')}

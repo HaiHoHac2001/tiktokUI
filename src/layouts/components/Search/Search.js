@@ -8,8 +8,8 @@ import classNames from 'classnames/bind';
 import AccountItem from '~/components/AccountItem';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import { useDebounce } from '~/hooks';
-import request from '~/utils/request';
 import styles from './Search.module.scss';
+import * as searchServices from '~/services/searchService';
 
 const cx = classNames.bind(styles);
 function Search() {
@@ -20,6 +20,24 @@ function Search() {
     const [loading, setLoading] = useState(false);
 
     const debouncedValue = useDebounce(searchValue, 500);
+
+    useEffect(() => {
+        if (!debouncedValue.trim()) {
+            setSearchResult([]);
+            return;
+        }
+
+        const fetchApi = async () => {
+            setLoading(true);
+
+            const result = await searchServices.search(debouncedValue);
+
+            setSearchResult(result);
+            setLoading(false);
+        };
+
+        fetchApi();
+    }, [debouncedValue]);
 
     const handleClear = () => {
         setSearchValue('');
@@ -39,45 +57,45 @@ function Search() {
         setShowResult(false);
     };
 
-    useEffect(() => {
-        // vì api không cho để chuỗi rỗng
-        if (!debouncedValue.trim()) {
-            setSearchResult([]);
-            return;
-        }
+    // useEffect(() => {
+    //     // vì api không cho để chuỗi rỗng
+    //     if (!debouncedValue.trim()) {
+    //         setSearchResult([]);
+    //         return;
+    //     }
 
-        setLoading(true);
+    //     setLoading(true);
 
-        // Fetch
-        //     setTimeout(() => {
-        //         fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debouncedValue)}&type=less`)
-        //             .then((response) => response.json())
-        //             .then((res) => {
-        //                 setSearchResult(res.data)
-        //                 setLoading(false)
-        //             })
-        //             .catch(() => {
-        //                 setLoading(false)
-        //             })
-        //     }, 0);
+    //     // Fetch
+    //     //     setTimeout(() => {
+    //     //         fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debouncedValue)}&type=less`)
+    //     //             .then((response) => response.json())
+    //     //             .then((res) => {
+    //     //                 setSearchResult(res.data)
+    //     //                 setLoading(false)
+    //     //             })
+    //     //             .catch(() => {
+    //     //                 setLoading(false)
+    //     //             })
+    //     //     }, 0);
 
-        // axios
-        request
-            .get('users/search', {
-                params: {
-                    q: debouncedValue,
-                    type: 'less',
-                },
-            })
-            .then((data) => {
-                setSearchResult(data.data.data);
-                setLoading(false);
-            })
-            .catch((err) => {
-                console.error(err);
-            })
-            .finally(() =>setLoading(false))
-    }, [debouncedValue]);
+    //     // axios
+    //     request
+    //         .get('users/search', {
+    //             params: {
+    //                 q: debouncedValue,
+    //                 type: 'less',
+    //             },
+    //         })
+    //         .then((data) => {
+    //             setSearchResult(data.data.data);
+    //             setLoading(false);
+    //         })
+    //         .catch((err) => {
+    //             console.error(err);
+    //         })
+    //         .finally(() =>setLoading(false))
+    // }, [debouncedValue]);
     return (
         //Xử lý cái warning của thư viện tippy
         <div>

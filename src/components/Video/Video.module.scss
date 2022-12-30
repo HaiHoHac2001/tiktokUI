@@ -1,0 +1,131 @@
+.wrapper {
+    padding: 42px 0;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    margin-right: 12px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    font-family: "SofiaPro", Arial, Tahoma, PingFangSC, sans-serif;
+    font-weight: 700;
+    font-size: 1.231rem;
+}
+
+.check {
+    margin: 0 6px;
+    color: #20d5ec;
+}
+
+.username {
+    color: #161823bf;
+    font-size: 1.28rem;
+    font-weight: 300;
+    
+    margin-left: 6px;
+}
+
+.btnFollow {
+    max-height: 28px;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.description-item {
+    font-size: 1.27rem;
+}
+
+.music {
+    margin-left: calc(56px + 8px);
+    display: flex;
+    align-items: center;
+}
+
+.music-link {
+    margin-left: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.body {
+    width: 357px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-item {
+    width: 290px;
+    height: 516px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.action {
+    position: relative;
+    align-self: flex-end;
+}
+
+.action-item {
+    position: relative;
+    margin-bottom: 36px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.action-item-icon {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.action-icon {
+    font-size: 2rem;
+    color: #161823;
+}
+
+.action-item-bg {
+    width: 48px;
+    height: 48px;
+    font-size: 0px;
+    border-radius: 50%;
+    -webkit-transition: all ease-in-out 200ms;
+    transition: all ease-in-out 200ms;
+    background-color: #1618230f;
+    margin-top: 8px;
+    margin-bottom: 6px;
+}
+
+.action-value {
+    font-size: 1.13rem;
+    font-weight: 700;
+    color: #161823bf;
+    width: 48px;
+    text-align: center;
+    position: relative;
+    left: -13px;
+    margin: 12px 0;
+}

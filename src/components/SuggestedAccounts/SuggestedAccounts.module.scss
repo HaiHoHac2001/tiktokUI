@@ -56,3 +56,18 @@
     padding: 8px;
     cursor: pointer;
 }
+.group-link {
+    font-family: "ProximaNova",Arial,Tahoma,PingFangSC,sans-serif;
+    font-weight: 600;
+    font-size: 1.12rem;
+    margin-top: 5px;
+}
+
+.link-item {
+    color: rgba(22, 24, 35, .5);
+    margin-right: 6px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

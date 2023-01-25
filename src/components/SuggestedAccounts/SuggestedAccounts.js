@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { NavLink, Link } from 'react-router-dom';
-import { useRouter } from 'next/router';
 import styles from './SuggestedAccounts.module.scss';
 import AccountItem from './AccountItem';
 import Button from '../Button';

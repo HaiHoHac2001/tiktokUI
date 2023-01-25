@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 
 import Button from '../Button';
 import Image from '../Image';
-import styles from './Video.module.scss';
+import styles from './VideoCard.module.scss';
 
 const cx = classNames.bind(styles);
 
@@ -38,12 +38,12 @@ function Video({ data, nameMusic }) {
                             </Button>
                         )}
                     </div>
-                    <p className={cx('music')}>
+                    <div className={cx('music')}>
                         <FontAwesomeIcon icon={faMusic} />
                         <a className={cx('music-link')}>
                             <span>{item.music ? item.music : nameMusic}</span>
                         </a>
-                    </p>
+                    </div>
                 </div>
                 <div className={cx('body')}>
                     <div className={cx('video')}>
@@ -53,21 +53,21 @@ function Video({ data, nameMusic }) {
                         <div className={cx('action-item')}>
                             <div className={cx('action-item-bg')}></div>
                             <div className={cx('action-item-icon')}>
-                                <FontAwesomeIcon className={cx('action-icon')} icon={faHeart}/>
+                                <FontAwesomeIcon className={cx('action-icon')} icon={faHeart} />
                                 <p className={cx('action-value')}>{item.likes_count}k</p>
                             </div>
                         </div>
                         <div className={cx('action-item')}>
                             <div className={cx('action-item-bg')}></div>
                             <div className={cx('action-item-icon')}>
-                                <FontAwesomeIcon className={cx('action-icon')} icon={faCommentDots}/>
+                                <FontAwesomeIcon className={cx('action-icon')} icon={faCommentDots} />
                                 <p className={cx('action-value')}>{item.comments_count}k</p>
                             </div>
                         </div>
                         <div className={cx('action-item')}>
                             <div className={cx('action-item-bg')}></div>
                             <div className={cx('action-item-icon')}>
-                                <FontAwesomeIcon className={cx('action-icon')} icon={faShare}/>
+                                <FontAwesomeIcon className={cx('action-icon')} icon={faShare} />
                                 <p className={cx('action-value')}>{item.shares_count}</p>
                             </div>
                         </div>

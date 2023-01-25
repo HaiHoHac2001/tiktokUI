@@ -235,7 +235,7 @@ function Header() {
                         {currentUser ? (
                             <Image
                                 className={cx('user-avatar')}
-                                src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.6435-9/150107612_1228909274239350_7642597782695748707_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=_Z7W11yxehgAX-FhmdX&_nc_ht=scontent-sin6-2.xx&oh=00_AfC1EXb4t86Sh_VmUOC7X_IdEasZrVSMxtuST-56hxPASg&oe=63C8B3D3"
+                                src="https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-1/326273402_556291789769248_369768734979445407_n.jpg?stp=dst-jpg_p320x320&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=NaPW1jefWPkAX8F9cR8&tn=LuX8TsSe1SocMMwx&_nc_ht=scontent.fdad1-4.fna&oh=00_AfBE2LNA4gMIdzoTu8WskIeAyTp7g0UsMXFYAJWGvAgfrg&oe=63D28A72"
                                 alt="Le Hong Bao Ngan"
                                 fallback="https://scontent-sin6-3.xx.fbcdn.net/v/t1.6435-9/51283494_1268544069974737_6131765697140752384_n.jpg?stp=dst-jpg_p720x720&_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=jRiMU-Ujm5AAX8N2jm3&_nc_ht=scontent-sin6-3.xx&oh=00_AfAd-j7j01U43u-FxWobyIHCe-7JhJjJ8dfg2qR1Zm2BdA&oe=63CA3D7D"
                             />

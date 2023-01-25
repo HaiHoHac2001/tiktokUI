@@ -34,40 +34,98 @@
     font-size: 1.3rem;
     color: #161823;
     line-height: 1;
-    font-family: "SofiaPro, Arial, Tahoma, PingFangSC, sans-serif";
+    font-family: 'SofiaPro, Arial, Tahoma, PingFangSC, sans-serif';
 }
 
 .check {
-    color:#20d5ec;
+    color: #20d5ec;
     font-size: 1.4rem;
     margin-left: 4px;
 }
 
 .name {
     color: #161823bf;
-    font-family: "ProximaNova";
+    font-family: 'ProximaNova';
     font-size: 0.96rem;
 }
 
 .see-more {
-    color:#fe2c55 ;
+    color: #fe2c55;
     font-weight: 600;
     font-size: 1.12rem;
     padding: 8px;
     cursor: pointer;
 }
 .group-link {
-    font-family: "ProximaNova",Arial,Tahoma,PingFangSC,sans-serif;
+    font-family: 'ProximaNova', Arial, Tahoma, PingFangSC, sans-serif;
     font-weight: 600;
     font-size: 1.12rem;
     margin-top: 5px;
 }
 
 .link-item {
-    color: rgba(22, 24, 35, .5);
+    color: rgba(22, 24, 35, 0.5);
     margin-right: 6px;
 
     &:hover {
         text-decoration: underline;
     }
+}
+
+// discover
+.topic-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.topic-link {
+    display: inline-flex;
+    max-width: 100%;
+    height: 24px;
+    margin-bottom: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(22, 24, 35, 0.2);
+    border-radius: 12px;
+    background: rgb(255, 255, 255);
+    margin-right: 8px;
+    font-size: 1rem;
+
+    &.active {
+        background-color: red;
+    }
+}
+
+// .active-topic {
+//     // display: inline-block;
+//     height: 24px;
+//     // border-radius: 12px;
+//     // max-width: 100%;
+//     // margin-right: 8px;
+//     // padding: 0;
+//     // border: 1px solid red !important;
+//     background-color: red;
+// }
+
+// .topic-list-item {
+//     display: inline-flex;
+//     max-width: 100%;
+//     height: 24px;
+//     margin-bottom: 12px;
+//     padding: 3px 10px;
+//     border: 1px solid rgba(22, 24, 35, 0.2);
+//     border-radius: 12px;
+//     background: rgb(255, 255, 255);
+//     margin-right: 8px;
+//     font-size: 1rem;
+// }
+
+// .active {
+//     background-color: red;
+// }
+
+.topic-list-item-desc {
+    position: relative;
+    top: -1px;
+    margin-left: 4px;
 }

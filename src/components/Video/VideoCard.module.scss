@@ -1,5 +1,6 @@
 .wrapper {
     padding: 42px 0;
+    margin-left: 348px;
 }
 
 .content {
@@ -24,7 +25,7 @@
 .name {
     display: flex;
     align-items: center;
-    font-family: "SofiaPro", Arial, Tahoma, PingFangSC, sans-serif;
+    font-family: 'SofiaPro', Arial, Tahoma, PingFangSC, sans-serif;
     font-weight: 700;
     font-size: 1.231rem;
 }
@@ -38,7 +39,7 @@
     color: #161823bf;
     font-size: 1.28rem;
     font-weight: 300;
-    
+
     margin-left: 6px;
 }
 
@@ -60,6 +61,7 @@
     margin-left: calc(56px + 8px);
     display: flex;
     align-items: center;
+    margin-bottom: 12px;
 }
 
 .music-link {
@@ -73,6 +75,7 @@
     width: 357px;
     display: flex;
     justify-content: space-between;
+    margin-left: 68px;
 }
 
 .video-item {

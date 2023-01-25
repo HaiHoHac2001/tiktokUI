@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 
 import styles from './Home.module.scss';
-import Video from '~/components/Video';
+import VideoCard from '~/components/Video';
 import { useState, useEffect } from 'react';
 import * as videoService from '~/services/videoService';
 import { dataVideo } from '~/components/Video/dataVideo';
@@ -27,7 +27,7 @@ function Home() {
 
     return (
         <div className={cx('wrapper')}>
-            <Video data={video} nameMusic = {'Hồ Hắc Hải'}/>
+            <VideoCard data={video} nameMusic = {'Hồ Hắc Hải'}/>
         </div>
     );
 }

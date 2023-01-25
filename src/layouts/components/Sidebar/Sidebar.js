@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 
 import styles from './Sidebar.module.scss';
 import Menu, { MenuItem } from './Menu';
+import {topics} from '~/utils/constants';
+
 import {
     HomeIcon,
     HomeActiveIcon,
@@ -21,48 +23,48 @@ const cx = classNames.bind(styles);
 const INIT_PAGE = 1
 const PER_PAGE = 5
 
-const listDiscover = [
-    {
-        icon: <FontAwesomeIcon icon={faHashtag}/>,
-        title:'suthatla'
-    },
-    {
-        icon: <FontAwesomeIcon icon={faHashtag}/>,
-        title:'mackedoi'
-    },
-    {
-        icon: <FontAwesomeIcon icon={faMusic}/>,
-        title:'Yêu Đơn Phương Là Gì (MEE Remix) - Mee Media & h0n & BHMedia'
-    },
-    {
-        icon: <FontAwesomeIcon icon={faMusic}/>,
-        title:'Về Nghe Mẹ Ru - NSND Bach Tuyet & Hứa Kim Tuyền & 14 Casper & Hoàng Dũng'
-    },
-    {
-        icon: <FontAwesomeIcon icon={faMusic}/>,
-        title:'Thiên Thần Tình Yêu - RICKY STAR'
-    },
-    {
-        icon: <FontAwesomeIcon icon={faHashtag}/>,
-        title:'7749hieuung'
-    },
-    {
-        icon: <FontAwesomeIcon icon={faHashtag}/>,
-        title:'genzlife'
-    },
-    {
-        icon: <FontAwesomeIcon icon={faMusic}/>,
-        title:'Tình Đã Đầy Một Tim - Huyền Tâm Môn'
-    },
-    {
-        icon: <FontAwesomeIcon icon={faMusic}/>,
-        title:'Thằng Hầu (Thái Hoàng Remix)'
-    },
-    {
-        icon: <FontAwesomeIcon icon={faHashtag}/>,
-        title:'hohachai'
-    },
-]
+// const listDiscover = [
+//     {
+//         icon: <FontAwesomeIcon icon={faHashtag}/>,
+//         title:'suthatla'
+//     },
+//     {
+//         icon: <FontAwesomeIcon icon={faHashtag}/>,
+//         title:'mackedoi'
+//     },
+//     {
+//         icon: <FontAwesomeIcon icon={faMusic}/>,
+//         title:'Yêu Đơn Phương Là Gì (MEE Remix) - Mee Media & h0n & BHMedia'
+//     },
+//     {
+//         icon: <FontAwesomeIcon icon={faMusic}/>,
+//         title:'Về Nghe Mẹ Ru - NSND Bach Tuyet & Hứa Kim Tuyền & 14 Casper & Hoàng Dũng'
+//     },
+//     {
+//         icon: <FontAwesomeIcon icon={faMusic}/>,
+//         title:'Thiên Thần Tình Yêu - RICKY STAR'
+//     },
+//     {
+//         icon: <FontAwesomeIcon icon={faHashtag}/>,
+//         title:'7749hieuung'
+//     },
+//     {
+//         icon: <FontAwesomeIcon icon={faHashtag}/>,
+//         title:'genzlife'
+//     },
+//     {
+//         icon: <FontAwesomeIcon icon={faMusic}/>,
+//         title:'Tình Đã Đầy Một Tim - Huyền Tâm Môn'
+//     },
+//     {
+//         icon: <FontAwesomeIcon icon={faMusic}/>,
+//         title:'Thằng Hầu (Thái Hoàng Remix)'
+//     },
+//     {
+//         icon: <FontAwesomeIcon icon={faHashtag}/>,
+//         title:'hohachai'
+//     },
+// ]
 
 const footerLinks = [
     {
@@ -191,7 +193,7 @@ function Sidebar() {
             <SuggestedAccounts label = "Suggested accounts" data={suggestedUsers} onSeeAll={handleSeeAll}/>
 
             {/* <SuggestedAccounts label = "Following accounts" data={suggestedUsers} /> */}
-            <SuggestedAccounts discover label = "Discover" data={listDiscover} />
+            <SuggestedAccounts discover label = "Discover" data={topics} />
             <SuggestedAccounts footer label = "" data={footerLinks} />
 
         </aside>

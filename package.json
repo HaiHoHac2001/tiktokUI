@@ -28,6 +28,8 @@
     },
     "scripts": {
         "start": "react-app-rewired start",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "build": "react-app-rewired build",
         "test": "react-app-rewired test",
         "eject": "react-app-rewired eject"
@@ -51,6 +53,7 @@
         ]
     },
     "devDependencies": {
-        "babel-plugin-module-resolver": "^4.1.0"
+        "babel-plugin-module-resolver": "^4.1.0",
+        "gh-pages": "^5.0.0"
     }
 }

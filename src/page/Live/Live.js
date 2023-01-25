@@ -1,5 +1,7 @@
 function Live() {
-    return <h2>Live Page</h2>
+    return (
+        <></>
+    )
 }
 
 export default Live;

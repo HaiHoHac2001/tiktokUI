@@ -3,7 +3,7 @@
 }
 
 .label {
-    font-size: 1.12rem;
+    font-size: 1.4rem;
     font-weight: 600;
     padding: 16px 0 8px 0;
     color: #161823bf;
@@ -31,7 +31,7 @@
 .nickname {
     display: flex;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: #161823;
     line-height: 1;
     font-family: 'SofiaPro, Arial, Tahoma, PingFangSC, sans-serif';
@@ -46,20 +46,20 @@
 .name {
     color: #161823bf;
     font-family: 'ProximaNova';
-    font-size: 0.96rem;
+    font-size: 1.2rem;
 }
 
 .see-more {
     color: #fe2c55;
     font-weight: 600;
-    font-size: 1.12rem;
+    font-size: 1.4rem;
     padding: 8px;
     cursor: pointer;
 }
 .group-link {
     font-family: 'ProximaNova', Arial, Tahoma, PingFangSC, sans-serif;
     font-weight: 600;
-    font-size: 1.12rem;
+    font-size: 1.2rem;
     margin-top: 5px;
 }
 
@@ -89,7 +89,7 @@
     border-radius: 12px;
     background: rgb(255, 255, 255);
     margin-right: 8px;
-    font-size: 1rem;
+    font-size: 1.4rem;
 
     &.active {
         background-color: red;
@@ -126,6 +126,6 @@
 
 .topic-list-item-desc {
     position: relative;
-    top: -1px;
+    top: -3px;
     margin-left: 4px;
 }

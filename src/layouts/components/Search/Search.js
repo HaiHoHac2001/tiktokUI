@@ -121,7 +121,7 @@ function Search() {
                         onFocus={() => setShowResult(true)}
                         value={searchValue}
                         onChange={handleChange}
-                        placeholder="Tìm kiếm tài khoản và video"
+                        placeholder="Search accounts and videos"
                         spellCheck={false}
                     />
                     {!!searchValue && !loading && (

@@ -31,14 +31,14 @@ const cx = classNames.bind(styles);
 const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faLanguage} />,
-        title: 'Tiếng Việt',
+        title: 'English',
         children: {
-            title: 'Ngôn ngữ',
+            title: 'Language',
             data: [
                 {
                     type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt (Việt Nam)',
+                    code: 'en',
+                    title: 'English',
                 },
                 {
                     type: 'language',
@@ -72,8 +72,8 @@ const MENU_ITEMS = [
                 },
                 {
                     type: 'language',
-                    code: 'en',
-                    title: 'English',
+                    code: 'vi',
+                    title: 'Tiếng Việt (Việt Nam)',
                 },
                 {
                     type: 'language',
@@ -140,28 +140,28 @@ const MENU_ITEMS = [
     },
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
-        title: 'Phản hồi & trợ giúp',
+        title: 'Feedback and help',
         to: '/feedback',
     },
     {
         icon: <FontAwesomeIcon icon={faKeyboard} />,
-        title: 'Phím tắt trên bàn phím',
+        title: 'Keyboard shortcuts',
     },
     {
         icon: <FontAwesomeIcon icon={faMoon} />,
-        title: 'Chế độ tối',
+        title: 'Dark mode',
     },
 ];
 
 const userMenu = [
     {
         icon: <FontAwesomeIcon icon={faUser} />,
-        title: 'Xem hồ sơ',
+        title: 'View profile',
         to: '/@hoaa',
     },
     {
         icon: <FontAwesomeIcon icon={faCoins} />,
-        title: 'Nhận Xu',
+        title: 'Get Coins',
         to: '/coin',
     },
     {
@@ -171,7 +171,7 @@ const userMenu = [
     },
     {
         icon: <FontAwesomeIcon icon={faGear} />,
-        title: 'Cài đặt',
+        title: 'Settings',
         to: '/settings',
     },
     ...MENU_ITEMS,

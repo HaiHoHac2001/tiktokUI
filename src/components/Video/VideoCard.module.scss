@@ -27,7 +27,7 @@
     align-items: center;
     font-family: 'SofiaPro', Arial, Tahoma, PingFangSC, sans-serif;
     font-weight: 700;
-    font-size: 1.231rem;
+    font-size: 1.8rem;
 }
 
 .check {
@@ -36,8 +36,10 @@
 }
 
 .username {
+    position: relative;
+    top: 2px;
     color: #161823bf;
-    font-size: 1.28rem;
+    font-size: 1.4rem;
     font-weight: 300;
 
     margin-left: 6px;
@@ -54,7 +56,7 @@
 }
 
 .description-item {
-    font-size: 1.27rem;
+    font-size: 1.6rem;
 }
 
 .music {
@@ -101,8 +103,8 @@
 
 .action-item-icon {
     position: absolute;
-    top: 12px;
-    left: 12px;
+    top: 15px;
+    left: 15px;
 }
 
 .action-icon {
@@ -123,7 +125,7 @@
 }
 
 .action-value {
-    font-size: 1.13rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #161823bf;
     width: 48px;
@@ -131,4 +133,5 @@
     position: relative;
     left: -13px;
     margin: 12px 0;
+    font-family: 'ProximaNova', sans-serif;
 }

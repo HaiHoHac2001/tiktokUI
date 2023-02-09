@@ -9,4 +9,4 @@ Make a web app Like TIKTOK
 * **Going around the world with just Tik Tok, just sitting at home you can see the beautiful landscapes, unique customs and habits in the country or the world through the computer screen.
 
 ## Use
-Link project: <a href="https://mytiktokclone.netlify.app/"/>
+Link project: [<a href="https://mytiktokclone.netlify.app/"/>](https://mytiktokclone.netlify.app/)
